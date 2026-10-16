@@ -1,9 +1,5 @@
 import { NavLink } from "react-router-dom";
 
-const navLinkStyle = ({ isActive }) => ({
-    color: isActive ? "red" : "black",
-});
-
 export default function Header() {
     return (
         <header>
@@ -11,10 +7,10 @@ export default function Header() {
 
             <nav>
                 {/* NavLink pages ke beech navigate karta hai aur active page ko pehchanta hai */}
-                <NavLink to="/" end style={navLinkStyle}>Home</NavLink>
-                <NavLink to="/about" style={navLinkStyle}>About</NavLink>
-                <NavLink to="/courses" style={navLinkStyle}>Courses</NavLink>
-                <NavLink to="/instructors" style={navLinkStyle}>Instructors</NavLink>
+                <NavLink to="/" end className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink> {/*current page ka link active hai ya nahi. hai toh active class nhi toh "" */}
+                <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About</NavLink>
+                <NavLink to="/courses" className={({ isActive }) => isActive ? "active" : ""}>Courses</NavLink>
+                <NavLink to="/instructors" className={({ isActive }) => isActive ? "active" : ""}>Instructors</NavLink>
             </nav>
         </header>
     )
