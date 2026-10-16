@@ -3,7 +3,7 @@
 //Route: har ek page ke liye URL aur component set karta hai
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./Pgitages/Home";
+import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Courses from "./Pages/Courses";
 import Instructors from "./Pages/Instructors";
